@@ -22,9 +22,44 @@ describe('calc', () => {
         const result = calc(3);
         expect(result.v).to.equal(3);
     });
+    
     it('should add any value to the actual', () => {
         const result = calc(3).add(5);
         expect(result.v).to.equal(8);
     });
-    it('should decrease the actual value by the given');
+    
+    it('should decrease the actual value by the given', () => {
+        const result = calc(3).minus(2);
+        expect(result.v).to.equal(1);
+    });
+    
+    it('should return square root of the actual value', () => {
+        const result = calc(4).sqrt();
+        expect(result.v).to.equal(2);
+    });
+    
+    it('should multiply the given values', () => {
+        const result = calc(3).times(10);
+        expect(result.v).to.equal(30);
+    });
+    
+    it('should divide the actual value by the given divisor', () => {
+        const result = calc(10).div(2);
+        expect(result.v).to.equal(5);
+    });
+
+    it('should return the modulo of the given dividend and divisor', () => {
+        const result = calc(10).modulo(5);
+        expect(result.v).to.equal(0);
+    });
+
+    it.skip('should throw error for division by zero', () => {
+        const result = calc(5).div(0);
+        expect(result.v).to.be.a(string).which.has('Division by 0 is not possible!');
+    });
+
+    it('should perform a series of calculations with the given values', () => {
+        const result = calc(3).add(4).minus(3).times(6)
+        expect(result.v).to.equal(24);
+    });
 });

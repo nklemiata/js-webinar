@@ -24,6 +24,35 @@ function grade(score) {
      */
     // PLACE YOUR CODE BETWEEN THIS...
 
+    // -------------- Variant 1 ----------------------------------
+    /*
+    if (score <0 || score > 100) {
+        return 0;
+    }
+    var a;
+    if (score >= 90) {
+        return a=5;
+    } else if (score >= 80) {            
+        return a=4;
+    } else if (score >= 70) {
+        return a=3;
+    } else if (score >= 60) {
+        return a=2
+    } else if (score >= 0) {
+        return a=1
+    }
+    gradeOfStudent = a;   
+    */
+// -------------- Variant 2 ----------------------------------
+    if (score <0 || score > 100) {
+        return 0;
+    } 
+    else if (60 <= score && score <= 100) {
+        gradeOfStudent = [1, 2, 3, 4, 5, 5]; 
+        return +gradeOfStudent[parseInt((score - 50) / 10)];
+    }
+    else 
+    return gradeOfStudent=1;
 
     // ...AND THIS COMMENT LINE!
     return gradeOfStudent;
