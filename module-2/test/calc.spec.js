@@ -53,9 +53,8 @@ describe('calc', () => {
         expect(result.v).to.equal(0);
     });
 
-    it.skip('should throw error for division by zero', () => {
-        const result = calc(5).div(0);
-        expect(result.v).to.be.a(string).which.has('Division by 0 is not possible!');
+    it('should throw error for division by zero', () => {
+        expect(() => calc(5).div(0)).to.throw(Error, 'Division by 0 is not possible!');
     });
 
     it('should perform a series of calculations with the given values', () => {
