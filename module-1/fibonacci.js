@@ -19,7 +19,11 @@ function fibonacci(n) {
      */
     // PLACE YOUR CODE BETWEEN THIS...
 
+<<<<<<< HEAD
     // -------------- Varian 1 ----------------------------------
+=======
+    // -------------- Variant 1 ----------------------------------
+>>>>>>> NK-task2
     if (n<0) {
         return nThFibonacci=0;
     }
@@ -32,7 +36,11 @@ function fibonacci(n) {
 
 
 /*
+<<<<<<< HEAD
     //------- Varian 2 - without recursion ------
+=======
+    //------- Variant 2 - without recursion ------
+>>>>>>> NK-task2
     if (n<0) {
         return nThFibonacci=0;
     }
