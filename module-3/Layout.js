@@ -21,7 +21,7 @@ class Layout {
             throw new Error('The child has been already added: ' + child.name);
         }
         this.children[child.name] = child;
-        child.setParent(this);
+        //child.setParent(this);
     }
 
     get(name) {
