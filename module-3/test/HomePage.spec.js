@@ -10,7 +10,7 @@ const HomePage = require('../HomePage');
 const expect = require('chai').expect;
 //seleniumAddress: 'http://localhost:4444/wd/hub'
 
-describe.only('HomePage Class', () => {
+describe('HomePage Class', () => {
     beforeEach(() => {
         global.element = ElementFinder.element;
         global.browser = new Browser();
