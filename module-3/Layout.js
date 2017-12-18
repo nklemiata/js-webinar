@@ -35,15 +35,9 @@ class Layout {
     }
 
     load(url){
-        browser.get(url);
+        browser.get(url); //? Why: AssertionError: expected undefined to equal 'http://epam.com' - ??
     }
     
-
-
-
-
-
-
 }
 
 

@@ -20,7 +20,7 @@ class Elements {
     }
 
     get(x) {
-        return x   //Did we have to use smth like "return Object.values(this.Elements);" ? 
+        return x   //? Did we have to use smth like "return Object.values(this.Elements);" ? 
     }
 }
 
