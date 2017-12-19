@@ -11,6 +11,10 @@ function toCamelCase(toConvert) {
     if (typeof toConvert !== 'string') {
         return '';
     }
+    const tmp = toConvert.split(' ');
+    console.log(JSON.stringify(tmp));
+    return tmp.join('');
+
     return toConvert
         .split(' ')
         .map(word => word
