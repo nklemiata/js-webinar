@@ -8,16 +8,36 @@
  * @returns {string} longest string or empty string in other cases
  */
 
- function longestString(textArr){
-    if (!textArr.isArray) {
+
+ 
+ function longestString(input){
+    if (!Array.isArray(input)) {  
         return '';
     }
+    
+    return longestString
+        .filter(strings => typeof strings === 'string')
+        .sort((a, b) => (b - a))
+        .reduce(function(longest, current) {
+            if(current.length > longest.length)
+               return current;
+            else
+            return longest;
+          })
 
-    let longest = textArr.reduce(function(longest, current) {
+};
+
+    /*let stringsOnly = input.filter(inputStrings => {typeof input[] == "string";
+    });
+    console.log(stringsOnly);
+
+    let longest = stringsOnly.reduce(function(longest, current) {
         if(current.length > longest.length)
            return current;
         else
         return longest;
       });
     return longest;  
- };
+ };*/
+
+ module.exports = longestString;

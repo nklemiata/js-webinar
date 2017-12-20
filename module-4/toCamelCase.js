@@ -1,5 +1,5 @@
 'use strict';
-const CHARACTERS_TO_KEEP = "0123456789qwertuiopasdfghjklzyxcvbnm";
+const CHARACTERS_TO_KEEP = '0123456789qwertuiopasdfghjklzyxcvbnm';
 /**
  * It returns the camel-case version of string.
  * E.g.: simple lowercase string => SimpleLowercaseString
