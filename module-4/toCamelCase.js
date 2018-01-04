@@ -14,8 +14,6 @@ function toCamelCase(toConvert) {
         console.log(JSON.stringify(tmp));
         return tmp.join('');*/
     }
-
-
     return toConvert
         .split(' ')
         .map(word => word

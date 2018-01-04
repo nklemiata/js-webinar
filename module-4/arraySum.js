@@ -11,43 +11,39 @@
 
 // flatten nested array:
 function flatten(arr, result = []) {
-    for (let i = 0, length = arr.length; i < length; i++) {
-        const value = arr[i];
-        if (Array.isArray(value)) {
-        flatten(value, result);
-        } else {
+  for (let i = 0; i < arr.length; i++) {
+      const value = arr[i];
+      if (Array.isArray(value)) {
+      flatten(value, result);
+      } else {
         result.push(value);
-        }
-    }
-    return result;
-    };
+      //console.log(result);
+      }
+  }
+  return result;
+  }
 
- function onlyNumbers(flatValue){
-   if (flatValue.isNumber) {
+  // verify numbers
+ function isNumber(flatValue){
+   if (typeof(flatValue) == 'number') {
      return true;
    } else
      return false;
  };
 
+ // sum up the number in array
  function arraySum(elements) {
-    if (!Array.isArray()) {
+    if (!Array.isArray(elements)) {
         return 0;
     }
-      for (let x=0, length = elements.length, x < length, x++) {
-        const value = arr[i];
-        return elements += arraySum.value
-        .map(flatten)
-        .filter(value => onlyNumbers) 
+      let sum = 0;
+      let flat = flatten(elements)
+      .filter(value => { return isNumber(value)}) 
+      console.log(flat);
+      for (let x=0; x < flat.length; x++) {
+        sum += flat[x];
       }
-         
+      return sum;   
    }
-/*
-test here: https://codepen.io/w3resource/pen/jGLepN?editors=0010 
-
-console.log(flatten([1, 2, [[[[[3]], [4, [[[["12", 2]]]]]]]]]));
-console.log(onlyNumbers(flatten([1, 2, [[[[[3]], [4, [[[["12", 2]]]]]]]]])));
-console.log(arraySum([1, 2, "3", 4, false, 6]));
-console.log(arraySum([1, 2, [[[[[3]], [4, [[[["12", 2]]]]]]]]]));
-*/
 
  module.exports = arraySum;
